@@ -5,6 +5,9 @@ app_name=rabbitmq
 
 check_root
 
+echo "enter the rabbitmq password"
+read -s Rabbitmq_pasw
+
 cp $script_dir/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo &>>$log_file
 VALIDATE $? "copying the repo of rabbitmq"
 
