@@ -4,6 +4,9 @@ app_name=mysql
 
 check_root
 
+echo "enter the root password "
+read -s Mysql_Root_pasw -a 
+
 
 dnf install mysql-server -y &>>$log_file
 VALIDATE $? "installing mysql"
