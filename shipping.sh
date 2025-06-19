@@ -6,16 +6,12 @@ app_name=shipping
 check_root
 app_setup
 systemd_setup
+maven_setup
 
-dnf install maven -y
-VALIDATE $? "installing maven "
+echo "enter the mysql password"
+read -s Mysql_root_pasw
 
 
-
-mvn clean package 
-VALIDATE $? "packaging the shipping application"
-mv target/shipping-1.0.jar shipping.jar 
-VALIDATE $? "moving and renaming the jar file"
 
 
 
