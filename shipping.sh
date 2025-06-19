@@ -4,12 +4,13 @@ source ./common.sh
 app_name=shipping
 
 check_root
-app_setup
-systemd_setup
-maven_setup
 
 echo "enter the mysql password"
 read -s Mysql_root_pasw
+
+app_setup
+maven_setup
+systemd_setup
 
 
 
